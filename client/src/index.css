@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navbar{
+  box-shadow: 2px 3px 4px rgba(0,0,0,0.06);
+}
+.navbar.scrollBg{
+  background-color: rgba(55, 55, 55, 0.815) !important;
+}
