@@ -1,0 +1,338 @@
+{
+	"info": {
+		"_postman_id": "a065bc85-5d3c-4b4a-a572-62b6441ecfb2",
+		"name": "shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13857688"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"email\": \"admin@admin.com\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer 8923sdfjlskdvjxpiozxcm;239uzjoif",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTlkMzRhMmQyYjliZjhkMjhkY2UxNSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MTAyNTY0OSwiZXhwIjoxNjcxMjg0ODQ5fQ.AzgSwqSilzzqOjjFDqCe1PuDVJfNIeYcc8p7av368LA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/users/find/6398b2cae4e94c71a2d289cd",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"find",
+						"6398b2cae4e94c71a2d289cd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL USERS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTlkMzRhMmQyYjliZjhkMjhkY2UxNSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MTAyNTY0OSwiZXhwIjoxNjcxMjg0ODQ5fQ.AzgSwqSilzzqOjjFDqCe1PuDVJfNIeYcc8p7av368LA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER STATS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTlkMzRhMmQyYjliZjhkMjhkY2UxNSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MTAyNTY0OSwiZXhwIjoxNjcxMjg0ODQ5fQ.AzgSwqSilzzqOjjFDqCe1PuDVJfNIeYcc8p7av368LA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/users/stats",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD PRODUCTS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTlkMzRhMmQyYjliZjhkMjhkY2UxNSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MTAyNTY0OSwiZXhwIjoxNjcxMjg0ODQ5fQ.AzgSwqSilzzqOjjFDqCe1PuDVJfNIeYcc8p7av368LA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Addidas Tshirt\",\r\n    \"desc\": \"testing\",\r\n    \"img\": \"test.png\",\r\n    \"categories\": [\"tshirt\", \"man\"],\r\n    \"size\": \"M\",\r\n    \"color\": \"gray\",\r\n    \"price\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL PRODUCTS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTlkMzRhMmQyYjliZjhkMjhkY2UxNSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MTAyNTY0OSwiZXhwIjoxNjcxMjg0ODQ5fQ.AzgSwqSilzzqOjjFDqCe1PuDVJfNIeYcc8p7av368LA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Addidas Tshirt\",\r\n    \"desc\": \"testing\",\r\n    \"img\": \"test.png\",\r\n    \"categories\": [\"tshirt\", \"man\"],\r\n    \"size\": \"M\",\r\n    \"color\": \"gray\",\r\n    \"price\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/products?category=man",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "man"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD ORDERS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTlkMzRhMmQyYjliZjhkMjhkY2UxNSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MTAyNTY0OSwiZXhwIjoxNjcxMjg0ODQ5fQ.AzgSwqSilzzqOjjFDqCe1PuDVJfNIeYcc8p7av368LA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"6399d34a2d2b9bf8d28dce15\",\r\n    \"products\":[\r\n        {\r\n            \"productId\": \"234j12jpojs125g30\",\r\n            \"quantity\": 3\r\n        },\r\n        {\r\n            \"productId\": \"234j12j3e23s125g30\",\r\n            \"quantity\": 1\r\n        }\r\n    ],\r\n    \"amount\": 65,\r\n    \"address\": \"Maldives\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "INCOME",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzOTlkMzRhMmQyYjliZjhkMjhkY2UxNSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3MTAyNTY0OSwiZXhwIjoxNjcxMjg0ODQ5fQ.AzgSwqSilzzqOjjFDqCe1PuDVJfNIeYcc8p7av368LA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"6399d34a2d2b9bf8d28dce15\",\r\n    \"products\":[\r\n        {\r\n            \"productId\": \"234j12jpojs125g30\",\r\n            \"quantity\": 3\r\n        },\r\n        {\r\n            \"productId\": \"234j12j3e23s125g30\",\r\n            \"quantity\": 1\r\n        }\r\n    ],\r\n    \"amount\": 65,\r\n    \"address\": \"Maldives\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/orders/income",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						"income"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
